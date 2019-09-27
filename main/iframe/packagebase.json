@@ -1,0 +1,9 @@
+{
+  "name": "program-iframe",
+  "scripts": {
+    "serve": "serve -s -l 7000"
+  },
+  "devDependencies": {
+    "serve": "^11.1.0"
+  }
+}
