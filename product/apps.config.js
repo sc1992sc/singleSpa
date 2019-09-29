@@ -2,15 +2,14 @@ var fs = require('fs')
 var path = require("path")
 var configs = require('./apps.config.json')
 var apps=configs.apps;
-var root=path.join(__dirname,'../main');
-var resource = fs.readdirSync(root);
+var root=path.join(__dirname,'./public');
 
 
 function getResource(config){
     var name=config.name;
     var info = fs.statSync(root+"/"+name)	
     if(info.isDirectory()){
-        var childAppResource=fs.readdirSync(root+"/"+name+'/dist/static/js');
+        var childAppResource=fs.readdirSync(root+"/"+name+'/static/js');
         var patters=config.resource.map(function(item){
             return new RegExp("^"+item+".[\\d|\\w]{20}.js$");
         });

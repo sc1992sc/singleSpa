@@ -2,19 +2,16 @@
     "apps":[{
         "name":"navbar",
         "base":true,
-        "server":"http://localhost:3001/static/js/",
         "resourceEntryUrl":"app",
         "resource":["manifest","vendor"]
     },{
         "name":"program1",
         "base":false,
-        "server":"http://localhost:3002/static/js/",
         "resourceEntryUrl":"app",
         "resource":["manifest","vendor"]
     },{
         "name":"program2",
         "base":false,
-        "server":"http://localhost:3003/static/js/",
         "resourceEntryUrl":"app",
         "resource":["manifest","vendor"]
     }]
