@@ -44,6 +44,7 @@
                 Vue.use(VueRouter);
 
                 configs.apps.forEach( project => {
+                  if(project.resource.length>0){
                     Promise.all(project.resource.map(i=>{
                       return System.import(project.server+i)
                     })).then(function(){
@@ -51,6 +52,11 @@
                           return project.base?true:location.hash.startsWith(`#/${project.name}`);
                       });
                     })
+                  }else{
+                    singleSpa.registerApplication(project.name,()=>System.import(project.name),(location)=>{
+                        return project.base?true:location.hash.startsWith(`#/${project.name}`);
+                    });
+                  }
                 });
                 singleSpa.start();
             })
