@@ -14,5 +14,10 @@
         "base":false,
         "resourceEntryUrl":"app",
         "resource":["manifest","vendor"]
+    },{
+        "name":"program3",
+        "base":false,
+        "resourceEntryUrl":"main",
+        "resource":["1"]
     }]
 }
