@@ -2,7 +2,7 @@
   <div id="navbar-app">
     <div id="nav">
       <router-link to="/program1">program1</router-link> |
-      <router-link to="/program2">program2</router-link>
+      <router-link to="/program2">program2</router-link> |
       <router-link to="/program3">program3</router-link>
     </div>
     <router-view/>
